@@ -3,7 +3,7 @@
 # input = File.read(File.join(__dir__, 'example')).split("\n")
 input = File.read(File.join(__dir__, 'input')).split("\n")
 
-def count_trees(input, dx, dy)
+def count_trees(input, dx, dy) # rubocop:disable Naming/MethodParameterName
   count = x = y = 0
 
   while y < input.length
