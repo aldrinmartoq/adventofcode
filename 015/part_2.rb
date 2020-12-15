@@ -13,7 +13,7 @@ input.each_with_index do |n, index|
   last = n
 end
 
-(input.length...30000000).each do |index|
+(input.length...30_000_000).each do |index|
   last_pos = index_map[last]
   n = last_pos && last_pos[1] ? last_pos[0] - last_pos[1] : 0
   index_map[n] ||= []
@@ -24,4 +24,4 @@ end
 
 puts "last: #{last}"
 
-require 'pry'; binding.pry
+# require 'pry'; binding.pry

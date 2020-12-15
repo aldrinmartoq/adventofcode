@@ -18,8 +18,10 @@ end
   n = last_pos && last_pos[1] ? last_pos[0] - last_pos[1] : 0
   index_map[n] ||= []
   index_map[n].unshift index
-  puts "last: #{last} n: #{n} index: #{index}"
+  # puts "last: #{last} n: #{n} index: #{index}"
   last = n
 end
 
-require 'pry'; binding.pry
+puts "last: #{last}"
+
+# require 'pry'; binding.pry
