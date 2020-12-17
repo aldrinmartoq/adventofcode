@@ -11,7 +11,7 @@ rules = input[0].split("\n").map do |line|
   OpenStruct.new name: name, values: values
 end
 
-your_ticket = input[1].split("\n").last.split(',').map(&:to_i)
+# your_ticket = input[1].split("\n").last.split(',').map(&:to_i)
 
 nearby_tickets = input[2].split("\n").drop(1).map { |x| x.split(',').map(&:to_i) }
 

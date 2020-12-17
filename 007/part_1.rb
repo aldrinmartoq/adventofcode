@@ -11,7 +11,7 @@ input = File.read(input_file).split("\n").map do |line|
     end
   end.compact
 
-  OpenStruct.new color: color, contains: contains #, line: line
+  OpenStruct.new color: color, contains: contains
 end
 
 color_map = {}

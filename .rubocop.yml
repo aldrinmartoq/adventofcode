@@ -33,6 +33,8 @@ Style/ClassAndModuleChildren:
     - inia/**/*
 Style/Documentation:
   Enabled: false
+Style/ParallelAssignment:
+  Enabled: false
 
 # Naming
 Naming/FileName:
@@ -43,3 +45,10 @@ Naming/AsciiIdentifiers:
   Enabled: false
 Naming/VariableName:
   Enabled: false
+Naming/MethodParameterName:
+  AllowedNames:
+    - 'd'
+    - 'x'
+    - 'y'
+    - 'z'
+    - 'w'

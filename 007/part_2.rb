@@ -11,7 +11,7 @@ input = File.read(input_file).split("\n").map do |line|
     end
   end.compact
 
-  OpenStruct.new color: color, contains: contains #, line: line
+  OpenStruct.new color: color, contains: contains
 end
 
 color_map = {}
@@ -23,7 +23,7 @@ input.each do |rule|
 end
 
 def navigate(color_map, color)
-  return unless node = color_map[color]
+  return unless (node = color_map[color])
 
   node.contains.map do |contain|
     contain.count + contain.count * navigate(color_map, contain.color)
