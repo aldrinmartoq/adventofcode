@@ -6,7 +6,16 @@ require 'pry'
 require_relative 'a0_struct'
 
 def read_input(dir, name: nil)
-  File.read(first_exists(dir, ARGV[0], name, p_input_name, 'input.txt'))
+  program_name = File.basename($PROGRAM_NAME).split('.rb').first
+  tries = [
+    ARGV[0],
+    name,
+    "#{program_name}_input.txt",
+    'input.txt',
+    "#{program_name}_sample.txt",
+    'sample.txt'
+  ]
+  File.read(first_exists(dir, *tries))
 end
 
 def first_exists(dir, *args)
@@ -19,8 +28,4 @@ def first_exists(dir, *args)
     puts "reading #{filename}"
     return filename
   end
-end
-
-def p_input_name
-  "#{File.basename($PROGRAM_NAME).split('.rb').first}_input.txt"
 end
