@@ -52,3 +52,6 @@ Naming/MethodParameterName:
     - 'y'
     - 'z'
     - 'w'
+
+Style/MultilineBlockChain:
+  Enabled: false
